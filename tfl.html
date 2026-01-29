@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ilford Live Transport</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="tfl.css" />
+  </head>
+  <body>
+    <div id="offline-banner">📴 Offline — showing last known data</div>
+
+    <!-- Brand / Logo row (added) -->
+    <div class="brand-row">
+      <a href="#" class="brand" aria-label="TfL Finder home">
+        <!-- Inline SVG badge (stylised, safe-to-use) -->
+        <svg class="brand-logo" viewBox="0 0 120 120" width="64" height="64" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="false">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ff5f6d"/>
+              <stop offset="1" stop-color="#ffc371"/>
+            </linearGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Background circle -->
+          <circle cx="60" cy="60" r="54" fill="url(#g1)" />
+          <!-- Inner glossy highlight -->
+          <ellipse cx="44" cy="44" rx="28" ry="18" fill="#ffffff80" transform="rotate(-25 44 44)"/>
+          <!-- Text (stylised TfL Finder) -->
+          <text x="50%" y="62%" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-weight="700" font-size="38" fill="#fff">TfL</text>
+          <text x="50%" y="85%" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-weight="600" font-size="10" fill="#fff">Finder</text>
+        </svg>
+      </a>
+
+      <div>
+        <h1>🚍🚆 Ilford Live Transport</h1>
+        <p class="updated">Auto-refreshes every 60 seconds</p>
+      </div>
+    </div>
+
+    <div class="sections-group">
+      <section>
+        <h2>Elizabeth Line</h2>
+        <ul id="train-times" class="loading">
+          Loading train times…
+        </ul>
+      </section>
+
+      <section>
+        <h2>Buses near Ilford Station</h2>
+        <ul id="bus-times" class="loading">
+          Loading bus times…
+        </ul>
+      </section>
+    </div>
+
+    <!-- <section>
+      <h2>Available Transport Modes</h2>
+      <ul id="modes" class="loading">
+        Loading modes…
+      </ul>
+    </section> -->
+
+    <script src="tfl.js"></script>
+  </body>
+</html>
