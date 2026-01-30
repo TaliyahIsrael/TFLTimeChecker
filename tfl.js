@@ -158,7 +158,7 @@ function renderBuses(data, cached = false) {
     .sort((a, b) => a.timeToStation - b.timeToStation)
     .slice(0, 3)
     .forEach((bus) => {
-      const stopLetter = bus.stopPointIndicator || "?";
+      const stopLetter = bus.stopPointIndicator || "W";
 
       const li = document.createElement("li");
       li.classList.add("bus");
@@ -221,7 +221,7 @@ function renderBusesT(data, cached = false) {
     .sort((a, b) => a.timeToStation - b.timeToStation)
     .slice(0, 3)
     .forEach((bus) => {
-      const stopLetter = bus.stopPointIndicator || "?";
+      const stopLetter = bus.stopPointIndicator || "T";
 
       const li = document.createElement("li");
       li.classList.add("bus");
@@ -284,7 +284,7 @@ function renderBusesV(data, cached = false) {
     .sort((a, b) => a.timeToStation - b.timeToStation)
     .slice(0, 3)
     .forEach((bus) => {
-      const stopLetter = bus.stopPointIndicator || "?";
+      const stopLetter = bus.stopPointIndicator || "V";
 
       const li = document.createElement("li");
       li.classList.add("bus");
@@ -347,7 +347,7 @@ function renderBusesS(data, cached = false) {
     .sort((a, b) => a.timeToStation - b.timeToStation)
     .slice(0, 3)
     .forEach((bus) => {
-      const stopLetter = bus.stopPointIndicator || "?";
+      const stopLetter = bus.stopPointIndicator || "S";
 
       const li = document.createElement("li");
       li.classList.add("bus");
@@ -410,7 +410,7 @@ function renderBusesH(data, cached = false) {
     .sort((a, b) => a.timeToStation - b.timeToStation)
     .slice(0, 3)
     .forEach((bus) => {
-      const stopLetter = bus.stopPointIndicator || "?";
+      const stopLetter = bus.stopPointIndicator || "H";
 
       const li = document.createElement("li");
       li.classList.add("bus");
